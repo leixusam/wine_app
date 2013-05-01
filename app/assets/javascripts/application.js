@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require_tree .
+
+$('#example').tooltip(options)
+$('.dropdown-toggle').dropdown()
+$('#example').popover(options)

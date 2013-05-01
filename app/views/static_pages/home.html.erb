@@ -1,0 +1,67 @@
+<% provide(:title, '') %>
+<div class="container">
+	<div class="span10 offset1 pagination-centered">
+		<h1>Welcome to the Wine App!</h1>
+
+		<div class="btn">
+			<div class="dropdown">
+				<a id="drop1" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+					Pick the wine <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu text-left" role="menu" aria-labelledby="drop1">
+				  <li><a tabindex="-1" href="#">Chateau Sauman Bordeaux 2009</a></li>
+				  <li><a tabindex="-1" href="#">Moet e Chandon Champagne NV</a></li>
+				  <li><a tabindex="-1" href="#">Cupcake Vineyard Riesling 2010</a></li>
+				  <li class="divider"></li>
+				  <li><a tabindex="-1" href="#">Log new wine</a></li>
+				</ul>
+			</div>
+		</div>	
+
+		<legend><p></p></legend>
+
+		<h2>Rate the wine 
+			<b class="icon-question-sign" data-toggle="tooltip" title="This is a description">
+			</b>
+		</h2>
+		<div class="btn-group">
+		  <button class="btn">1</button>
+		  <button class="btn">2</button>
+		  <button class="btn">3</button>
+		  <button class="btn">4</button>
+		  <button class="btn">5</button>
+		</div>
+
+		<legend><p></p></legend>
+
+		<form>
+		  <fieldset>
+		    <h2>Smell</h2>
+		    <label>Note 1</label>
+		    <input type="text" placeholder="First note on the nose...">
+		    <label>Note 2</label>
+		    <input type="text" placeholder="Second note on the nose...">
+		    <label>Note 3</label>
+		    <input type="text" placeholder="Third note on the nose...">
+		  </fieldset>
+		</form>
+
+		<legend><p></p></legend>
+
+		<form>
+		  <fieldset>
+		    <h2>Taste</h2>
+		    <label>Note 1</label>
+		    <input type="text" placeholder="First note on the lips...">
+		    <label>Note 2</label>
+		    <input type="text" placeholder="Second note on the lips...">
+		    <label>Note 3</label>
+		    <input type="text" placeholder="Third note on the lips...">
+		  </fieldset>
+		</form>
+
+		<legend><p></p></legend>
+
+		<div class="btn btn-primary">Submit!</div>
+	</div>
+</div>
