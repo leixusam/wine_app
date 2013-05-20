@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130501044203) do
+ActiveRecord::Schema.define(:version => 20130519003328) do
 
   create_table "ratings", :force => true do |t|
     t.integer  "wine_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20130501044203) do
     t.string   "vintage"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "region"
   end
 
 end

@@ -6,7 +6,7 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home",         root_path %></li>
-          <li><%= link_to "Add a wine",   '#' %></li>
+          <li><%= link_to "Add a wine",   new_wine_path %></li>
           <li><%= link_to "Rate a wine",  '#' %></li>
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
