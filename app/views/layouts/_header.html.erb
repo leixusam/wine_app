@@ -6,8 +6,9 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home",         root_path %></li>
+          <li><%= link_to "Wine collection",  wines_path %></li>
           <li><%= link_to "Add a wine",   new_wine_path %></li>
-          <li><%= link_to "Rate a wine",  '#' %></li>
+          <li><%= link_to "Rate a wine",  new_rating_path %></li>
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -15,7 +16,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "My wines", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>

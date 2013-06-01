@@ -1,0 +1,20 @@
+<% provide(:title, Wine.find_by_id(@rating.wine_id).full_name) %>
+<div class="row">
+  <aside class="span8">
+    <section>
+      <h1>
+        <%= Wine.find_by_id(@rating.wine_id).full_name %>
+      </h1>
+        <%= @rating.wine_id %>
+        <%= @rating.user_id %>
+        <%= @rating.taste1 %>
+        <%= @rating.taste2 %>
+        <%= @rating.taste3 %>
+        <%= @rating.smell1 %>
+        <%= @rating.smell2 %>
+        <%= @rating.smell3 %>
+        <%= @rating.overall_rating %>
+        <%= link_to "edit", edit_rating_path(@rating) %>
+    </section>
+  </aside>
+</div>

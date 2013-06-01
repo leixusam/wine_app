@@ -1,2 +1,40 @@
-<h1>Ratings#new</h1>
-<p>Find me in app/views/ratings/new.html.erb</p>
+<% provide(:title, 'Rate a wine!') %>
+<h1>Rate a wine!</h1>
+
+<div class="row">
+  <div class="span6 offset3 pagination-centered">
+    <%= form_for(@rating) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :smell1 %>
+      <%= f.text_field :smell1 %>
+			
+			<%= f.label :smell2 %>
+			<%= f.text_field :smell2 %>
+      
+      <%= f.label :smell3 %>
+      <%= f.text_field :smell3 %>
+
+      <%= f.label :taste1 %>
+      <%= f.text_field :taste1 %>
+
+      <%= f.label :taste2 %>
+      <%= f.text_field :taste2 %>
+
+      <%= f.label :taste3 %>
+      <%= f.text_field :taste3 %>
+
+      <%= f.label :overall_rating %>
+      <%= f.select :overall_rating, [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]] %>
+
+      <%= f.label :wine_id %>
+      <%= collection_select :rating, :wine_id, Wine.all, :id, :varietal  %>
+
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+      <p></p>
+      	
+      <%= f.submit "Submit rating", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

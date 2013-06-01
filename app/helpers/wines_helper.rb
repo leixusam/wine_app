@@ -1,9 +1,9 @@
 module WinesHelper
 	def full_name_for(wine)
 		if wine.name.empty?
-			"#{wine.varietal}, #{wine.winery} #{wine.region} #{wine.vintage}"
+			"#{wine.winery} #{wine.varietal} #{wine.vintage}, #{wine.region}"
 		else
-			"#{wine.name}, #{wine.winery} #{wine.region} #{wine.vintage}"
+			"#{wine.winery} #{wine.name} (#{wine.varietal}) #{wine.vintage}, #{wine.region}"
 		end
 	end
 end

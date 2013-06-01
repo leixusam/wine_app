@@ -1,5 +1,12 @@
-<li>
-  <%= link_to full_name_for(wine), wine %>
-	<%= link_to "delete", wine, method: :delete,
+<h2 class="float-left">
+	<%= link_to full_name_for(wine), wine %> 
+</h2>
+
+<div class="well">
+  
+  <%= render wine.ratings %>
+  <%= link_to "rate", new_rating_path, class: "pull-right" %> 
+  <%= link_to "edit", edit_wine_path(wine), class: "pull-right" %> 
+	<%= link_to "delete", wine, class: "pull-right", method: :delete,
                                   data: { confirm: "You sure?" } %>
-</li>
+</div>

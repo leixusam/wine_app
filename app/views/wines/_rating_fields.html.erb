@@ -1,0 +1,30 @@
+<fieldset>
+<%= f.label :smell1 %>
+<%= f.text_field :smell1 %>
+
+<%= f.label :smell2 %>
+<%= f.text_field :smell2 %>
+
+<%= f.label :smell3 %>
+<%= f.text_field :smell3 %>
+
+<%= f.label :taste1 %>
+<%= f.text_field :taste1 %>
+
+<%= f.label :taste2 %>
+<%= f.text_field :taste2 %>
+
+<%= f.label :taste3 %>
+<%= f.text_field :taste3 %>
+
+<%= f.label :overall_rating %>
+<%= f.select :overall_rating, [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]] %>
+
+<%= link_to "not feeling it", '#', class: "remove_fields btn btn-large btn-primary" %>
+
+<!--%= f.label :wine_id %-->
+<!--%= f.hidden_field :wine_id, :value => 1 %-->
+<!--%= collection_select :ratings, :wine_id, Wine.all, :id, :varietal  %-->
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
+</fieldset>
